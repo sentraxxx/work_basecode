@@ -2,9 +2,15 @@ import logging
 import sys
 import time
 import datetime
+import os
 
 def main():
     # Logging
+    if os.path.isdir('./logs'):
+        pass
+    else:
+        os.mkdir('./logs')
+
     logging.basicConfig(
         filename='./logs/work_basic.log',
         format='[%(asctime)s] %(levelname)s: %(name)s : %(message)s',

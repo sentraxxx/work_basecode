@@ -52,6 +52,16 @@ def main():
         for row in res['Items']:
             print(row)
 
+        # KeyConditionExpressionの別の設定方法
+        conditions={
+            "IndexName": MEIGARA_INDEX,
+            "KeyConditionExpression": Key('meigara').eq('東力士')
+        }
+
+        res = table.query(**conditions)
+        for i,row in enumerate(res['Items']):
+            print(f'{i}:{row}')
+
 if __name__ == "__main__":
     
     main()
