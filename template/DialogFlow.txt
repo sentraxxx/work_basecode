@@ -1,0 +1,94 @@
+event {
+    'resource': '/sakechan', 
+    'path': '/sakechan', 
+    'httpMethod': 'POST', 
+    'headers': {
+        'Accept': '* /*', 
+        'Accept-Encoding': 'gzip,deflate,br', 
+        'content-type': 'application/json', 
+        'Host': '1gg0wgokm3.execute-api.ap-northeast-1.amazonaws.com', 
+        'User-Agent': 'Google-Dialogflow', 
+        'X-Amzn-Trace-Id': 'Root=1-5deb3056-7d8fad5857ef00f8b0c3ab8c', 
+        'x-api-key': 'oTHYW4pbCQ4bo3eaTD2DY7FXzilFvPmWa9SgriUp', 
+        'X-Forwarded-For': '66.249.84.75', 
+        'X-Forwarded-Port': '443', 
+        'X-Forwarded-Proto': 'https'
+        }, 
+    'multiValueHeaders': {
+        'Accept': ['*/*'], 
+        'Accept-Encoding': ['gzip,deflate,br'], 
+        'content-type': ['application/json'], 
+        'Host': ['1gg0wgokm3.execute-api.ap-northeast-1.amazonaws.com'], 
+        'User-Agent': ['Google-Dialogflow'], 
+        'X-Amzn-Trace-Id': ['Root=1-5deb3056-7d8fad5857ef00f8b0c3ab8c'], 
+        'x-api-key': ['oTHYW4pbCQ4bo3eaTD2DY7FXzilFvPmWa9SgriUp'], 
+        'X-Forwarded-For': ['66.249.84.75'], 
+        'X-Forwarded-Port': ['443'], 
+        'X-Forwarded-Proto': ['https']
+        }, 
+    'queryStringParameters': None, 
+    'multiValueQueryStringParameters': None, 
+    'pathParameters': None, 
+    'stageVariables': None, 
+    'requestContext': {
+        'resourceId': 'a436gc', 
+        'resourcePath': '/sakechan', 
+        'httpMethod': 'POST', 
+        'extendedRequestId': 'EUR9mGr_NjMFn3w=', 
+        'requestTime': '07/Dec/2019: 04: 53: 42 +0000', 
+        'path': '/default/sakechan', 
+        'accountId': '450143857598', 
+        'protocol': 'HTTP/1.1', 
+        'stage': 'default', 
+        'domainPrefix': '1gg0wgokm3', 
+        'requestTimeEpoch': 1575694422925, 
+        'requestId': '8f66769d-f858-4fb4-925b-cb8e7a98444c', 
+        'identity': {
+            'cognitoIdentityPoolId': None, 
+            'cognitoIdentityId': None, 
+            'apiKey': 'oTHYW4pbCQ4bo3eaTD2DY7FXzilFvPmWa9SgriUp', 
+            'principalOrgId': None, 
+            'cognitoAuthenticationType': None, 
+            'userArn': None, 
+            'apiKeyId': 'ldjfizg92e', 
+            'userAgent': 'Google-Dialogflow', 
+            'accountId': None, 
+            'caller': None, 
+            'sourceIp': '66.249.84.75', 
+            'accessKey': None, 
+            'cognitoAuthenticationProvider': None, 
+            'user': None}, 
+        'domainName': '1gg0wgokm3.execute-api.ap-northeast-1.amazonaws.com', 
+        'apiId': '1gg0wgokm3'
+        }, 
+        'body': '{
+            \n  "responseId": "5257e60b-3423-4155-b106-c947de41b2c3-415208ed",\n  
+                "queryResult": {\n    
+                    "queryText": "田酒はどこのお酒？",\n    
+                    "parameters": {\n
+                              "sakename": "田酒"\n
+                              },\n
+                    "allRequiredParamsPresent": true,\n
+                    "fulfillmentText": "田酒 はあおもりだよん",\n    
+                    "fulfillmentMessages": [{\n      
+                        "text": {\n        
+                            "text": [
+                                "田酒 はあおもりだよん"
+                                ]\n
+                                }\n
+                            }],\n    
+                    "intent": {\n      
+                        "name": "projects/ponsyuchan-spytgh/agent/intents/c93fe1d6-2764-4468-bbf4-e612c7a3a88a",\n      
+                        "displayName": "ask_place_from_sake"\n
+                        },\n    
+                    "intentDetectionConfidence": 1.0,\n    
+                    "languageCode": "ja"\n
+                },\n  
+                "originalDetectIntentRequest": {\n    
+                    "payload": {\n
+                        }\n
+                    },\n  
+                "session": "projects/ponsyuchan-spytgh/agent/sessions/d4e4633c-a56d-3b50-9766-f73b87136696"\n
+                }', 
+                'isBase64Encoded': False
+}

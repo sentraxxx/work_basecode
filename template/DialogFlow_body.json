@@ -1,0 +1,31 @@
+{
+    "body": {
+        "responseId": "5257e60b-3423-4155-b106-c947de41b2c3-415208ed",  
+        "queryResult": {    
+            "queryText": "田酒はどこのお酒？",    
+            "parameters": {
+                      "sakename": "田酒"
+                      },
+            "allRequiredParamsPresent": true,
+            "fulfillmentText": "田酒 はあおもりだよん",    
+            "fulfillmentMessages": [{      
+                "text": {        
+                    "text": [
+                        "田酒 はあおもりだよん"
+                        ]
+                        }
+                    }],    
+            "intent": {      
+                "name": "projects/ponsyuchan-spytgh/agent/intents/c93fe1d6-2764-4468-bbf4-e612c7a3a88a",      
+                "displayName": "ask_place_from_sake"
+                },    
+            "intentDetectionConfidence": 1.0,    
+            "languageCode": "ja"
+        },  
+        "originalDetectIntentRequest": {    
+            "payload": {
+                }
+            },  
+        "session": "projects/ponsyuchan-spytgh/agent/sessions/d4e4633c-a56d-3b50-9766-f73b87136696"
+    }
+}

@@ -1,0 +1,83 @@
+"queryResult": {
+        "queryText": "あっちゃんと",
+            "action": "aws_ask_trip.aws_ask_trip-custom.aws_ask_trip_where-custom",
+                "parameters": {
+                          "withwho": "あっちゃん"
+                          },
+                "allRequiredParamsPresent": true,
+                "fulfillmentMessages": [
+                    {
+                        "text": {
+                            "text": [""]
+                            }
+                    }
+                ],
+                "outputContexts": [
+                    {
+                        "name": "projects/jikkenchan-gpfxqf/agent/sessions/d4e4633c-a56d-3b50-9766-f73b87136696/contexts/aws_ask_trip_where-followup",
+                        "lifespanCount": 1,
+                        "parameters": {
+                            "place": "ハワイ",
+                            "place.original": "ハワイ",
+                            "withwho": "あっちゃん",
+                            "withwho.original": "あっちゃん"
+                        }
+                    }, 
+                    {
+                        "name": "projects/jikkenchan-gpfxqf/agent/sessions/d4e4633c-a56d-3b50-9766-f73b87136696/contexts/ask_",
+                        "lifespanCount": 1,
+                        "parameters": {
+                            "place": "ハワイ",
+                            "place.original": "ハワイ",
+                            "withwho": "あっちゃん",
+                            "withwho.original": "あっちゃん"
+                        }
+                    }, 
+                    {
+                        "name": "projects/jikkenchan-gpfxqf/agent/sessions/d4e4633c-a56d-3b50-9766-f73b87136696/contexts/ask_trip",
+                        "lifespanCount": 3,
+                        "parameters": {
+                            "place": "ハワイ",
+                            "place.original": "ハワイ",
+                            "withwho": "あっちゃん",
+                            "withwho.original": "あっちゃん"
+                        }
+                    }, 
+                    {
+                        "name": "projects/jikkenchan-gpfxqf/agent/sessions/d4e4633c-a56d-3b50-9766-f73b87136696/contexts/aws_ask_trip-followup",
+                        "parameters": {
+                            "place": "ハワイ",
+                            "place.original": "ハワイ",
+                            "withwho": "あっちゃん",
+                            "withwho.original": "あっちゃん"
+                        }
+                    }, 
+                    {
+                        "name": "projects/jikkenchan-gpfxqf/agent/sessions/d4e4633c-a56d-3b50-9766-f73b87136696/contexts/ask_trip_have_place",
+                        "lifespanCount": 4,
+                        "parameters": {
+                            "place": "ハワイ",
+                            "place.original": "ハワイ",
+                            "withwho": "あっちゃん",
+                            "withwho.original": "あっちゃん"
+                        }
+                    }
+                    ],
+                    "intent": {
+                        "name": "projects/jikkenchan-gpfxqf/agent/intents/a4b7e1b1-d659-4261-ba85-4140416c2cf8",
+                        "displayName": "aws_ask_trip_with",
+                        "endInteraction": true
+                    },
+                    "intentDetectionConfidence": 1.0,
+                    "languageCode": "ja"
+                },   
+                "originalDetectIntentRequest": {
+                    "payload": {}
+                    },
+                "session": "projects/jikkenchan-gpfxqf/agent/sessions/d4e4633c-a56d-3b50-9766-f73b87136696"
+            }',
+            'isBase64Encoded': False
+        }
+        }
+    }
+}

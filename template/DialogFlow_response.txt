@@ -1,0 +1,11 @@
+    return {
+        'statusCode': 200,
+        'body': json.dumps({
+            "fulfillment_text": "show text from aws lambda",
+            "fulfillment_messages":[{
+                "text" : {
+                    "text" : ["Hello from Lambda!"]
+                }
+            }]
+        })
+    }

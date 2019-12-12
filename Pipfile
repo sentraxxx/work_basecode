@@ -10,6 +10,7 @@ pylint = "*"
 bs4 = "*"
 requests = "*"
 boto3 = "*"
+sparqlwrapper = "*"
 
 [requires]
 python_version = "3.6"
