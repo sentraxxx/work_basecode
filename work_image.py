@@ -24,13 +24,14 @@ for i in imglist:
     imgsrc = i['src']
     print(imgsrc)
 
-## ファイル取得
+## ファイル取得&保存
 res_img = requests.get(imgsrc,verify=False, stream=True)
 print(res_img.headers['Content-Type'])
 if res_img.status_code == 200:
     with open(FILE_NAME, 'wb') as f:
         f.write(res_img.content)
 
-    ## イメージ出力
-    img = mpimg.imread(f)
-    imgplot = plt.imshow(img)
+## イメージ出力(表示)
+img = plt.imread('./img.jpg')
+plt.imshow(img)
+plt.show()
