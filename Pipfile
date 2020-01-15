@@ -11,6 +11,8 @@ bs4 = "*"
 requests = "*"
 boto3 = "*"
 sparqlwrapper = "*"
+matplotlib = "*"
+pillow = "*"
 
 [requires]
 python_version = "3.6"
