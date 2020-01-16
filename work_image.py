@@ -7,13 +7,21 @@ import re
 
 ##########################################################
 # Google photo link アクセスURL (javascriptを含むページ)
-URL = 'https://photos.app.goo.gl/FcCsB7iE1Fmjh93Z7'
+GOOGLE_PHOTO_LINK = 'https://photos.app.goo.gl/FcCsB7iE1Fmjh93Z7'
 
 #  保存先ファイル名
-FILE_NAME = './files/img.jpg'
+SAVE_FILE_NAME = './files/img.jpg'
 
 
 def getImgSrcFromGooglePhoto(url):
+    """google photoのLinkページから画像のsrc urlを取得する
+    
+    Arguments:
+        url {[string]]} -- [google photoのLink]
+    
+    Returns:
+        [string] -- [画像srcのurl]
+    """    
     # SSL warning無効化
     warnings.simplefilter(
         'ignore', requests.urllib3.exceptions.InsecureRequestWarning)
@@ -51,5 +59,5 @@ def showimg(src, file_name):
 
 
 # main
-imgsrc = getImgSrcFromGooglePhoto(URL)
-showimg(imgsrc, FILE_NAME)
+imgsrc = getImgSrcFromGooglePhoto(GOOGLE_PHOTO_LINK)
+showimg(imgsrc, SAVE_FILE_NAME)
