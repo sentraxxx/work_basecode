@@ -1,37 +1,55 @@
 import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
 from PIL import Image
 import requests
 from bs4 import BeautifulSoup
 import warnings
+import re
 
-## アクセスURL
-URL = 'https://photos.app.goo.gl/mzgck3Kbw2eaXBwEA'
-FILE_NAME = 'img.jpg'
+##########################################################
+# Google photo link アクセスURL (javascriptを含むページ)
+URL = 'https://photos.app.goo.gl/FcCsB7iE1Fmjh93Z7'
 
-## SSL warning無効化
-warnings.simplefilter(
-    'ignore', requests.urllib3.exceptions.InsecureRequestWarning)            
+#  保存先ファイル名
+FILE_NAME = './files/img.jpg'
 
-res_imgweb = requests.get(URL, verify=False)
-bf_top = BeautifulSoup(res_imgweb.text, 'html.parser')
 
-## イメージsrc url取得
-imgsrc = ''
-imglist = bf_top.select('img')
-for i in imglist:
-    print(i)
-    imgsrc = i['src']
-    print(imgsrc)
+def getImgSrcFromGooglePhoto(url):
+    # SSL warning無効化
+    warnings.simplefilter(
+        'ignore', requests.urllib3.exceptions.InsecureRequestWarning)
 
-## ファイル取得&保存
-res_img = requests.get(imgsrc,verify=False, stream=True)
-print(res_img.headers['Content-Type'])
-if res_img.status_code == 200:
-    with open(FILE_NAME, 'wb') as f:
-        f.write(res_img.content)
+    # google photoリンクページアクセス
+    res_imgweb = requests.get(url, verify=False)
+    bf_top = BeautifulSoup(res_imgweb.text, 'html.parser')
 
-## イメージ出力(表示)
-img = plt.imread('./img.jpg')
-plt.imshow(img)
-plt.show()
+    # イメージsrc url取得
+    imgsrc = ''
+    imglist = bf_top.select('script')
+    print(f'imglist len= ', len(imglist))
+    for id, img in enumerate(imglist):
+        match = re.search(r'https:\/\/[^"]*', img.string, re.S)
+        # print('<script> id= ', id, ': ', img.string[0:30])
+        # print('<script> id= ', id, ': ', match.group() if match else "no match")
+        if match:
+            imgsrc = match.group(0)
+
+    return imgsrc
+
+
+def showimg(src, file_name):
+    # ファイル取得&保存
+    res_img = requests.get(src, verify=False, stream=True)
+    print(res_img.headers['Content-Type'])
+    if res_img.status_code == 200:
+        with open(file_name, 'wb') as f:
+            f.write(res_img.content)
+
+    # イメージ出力(表示)
+    img = plt.imread(file_name)
+    plt.imshow(img)
+    plt.show()
+
+
+# main
+imgsrc = getImgSrcFromGooglePhoto(URL)
+showimg(imgsrc, FILE_NAME)

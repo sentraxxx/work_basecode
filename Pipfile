@@ -13,6 +13,8 @@ boto3 = "*"
 sparqlwrapper = "*"
 matplotlib = "*"
 pillow = "*"
+selenium = "*"
+lxml = "*"
 
 [requires]
 python_version = "3.6"
